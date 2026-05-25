@@ -1,0 +1,89 @@
+{
+  "benchmark": "YOLO26 CoreML parity smoke",
+  "timestamp": "2026-05-24T14:56:50.888649",
+  "image": "images/bus.jpg",
+  "model": "yolo26n",
+  "conf": 0.25,
+  "preprocess": "letterbox",
+  "best_box_format": "xyxy",
+  "comparisons": [
+    {
+      "box_format": "xywh",
+      "reference_count": 5,
+      "coreml_count": 5,
+      "matched_count": 5,
+      "mean_iou": 0.23890923430165928,
+      "matches": [
+        {
+          "class": 5,
+          "reference_conf": 0.9236459732055664,
+          "coreml_conf": 0.92626953,
+          "iou": 0.33423758881844257
+        },
+        {
+          "class": 0,
+          "reference_conf": 0.9126116037368774,
+          "coreml_conf": 0.90185547,
+          "iou": 0.135729340854758
+        },
+        {
+          "class": 0,
+          "reference_conf": 0.9054594039916992,
+          "coreml_conf": 0.9121094,
+          "iou": 0.39506744252611026
+        },
+        {
+          "class": 0,
+          "reference_conf": 0.8700898289680481,
+          "coreml_conf": 0.8574219,
+          "iou": 0.11844651825997221
+        },
+        {
+          "class": 0,
+          "reference_conf": 0.534513533115387,
+          "coreml_conf": 0.48828125,
+          "iou": 0.21106528104901323
+        }
+      ]
+    },
+    {
+      "box_format": "xyxy",
+      "reference_count": 5,
+      "coreml_count": 5,
+      "matched_count": 5,
+      "mean_iou": 0.9514129158532757,
+      "matches": [
+        {
+          "class": 5,
+          "reference_conf": 0.9236459732055664,
+          "coreml_conf": 0.92626953,
+          "iou": 0.9797818816304434
+        },
+        {
+          "class": 0,
+          "reference_conf": 0.9126116037368774,
+          "coreml_conf": 0.90185547,
+          "iou": 0.9862959637270444
+        },
+        {
+          "class": 0,
+          "reference_conf": 0.9054594039916992,
+          "coreml_conf": 0.9121094,
+          "iou": 0.9834504398591383
+        },
+        {
+          "class": 0,
+          "reference_conf": 0.8700898289680481,
+          "coreml_conf": 0.8574219,
+          "iou": 0.9778439389506186
+        },
+        {
+          "class": 0,
+          "reference_conf": 0.534513533115387,
+          "coreml_conf": 0.48828125,
+          "iou": 0.829692355099134
+        }
+      ]
+    }
+  ]
+}

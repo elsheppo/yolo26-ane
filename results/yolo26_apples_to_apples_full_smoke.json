@@ -1,0 +1,214 @@
+{
+  "benchmark": "YOLO26 apples-to-apples inference",
+  "timestamp": "2026-05-24T14:59:46.187379",
+  "device_info": {
+    "platform": "macOS-26.0.1-arm64-arm-64bit",
+    "processor": "arm",
+    "python_version": "3.9.6",
+    "cpu": "Apple M4 Pro",
+    "mac_model": "Mac16,7"
+  },
+  "configuration": {
+    "image": "images/bus.jpg",
+    "image_size": 640,
+    "warmup_runs": 3,
+    "timed_runs": 10,
+    "models": [
+      "n"
+    ],
+    "backends": [
+      "mlx",
+      "pytorch_mps",
+      "pytorch_cpu",
+      "coreml_ane",
+      "coreml_all",
+      "coreml_gpu",
+      "coreml_cpu"
+    ],
+    "preprocess": "letterbox",
+    "cache_bust": true,
+    "webai_repo": "YOLO26_WEBAI_REPO_CACHE or /private/tmp/yolo-mlx-webai",
+    "webai_python": "/opt/homebrew/bin/python3.12",
+    "coreml_timeout_s": 120
+  },
+  "results": {
+    "mlx": {
+      "n": {
+        "mean_ms": 6.442903995048255,
+        "std_ms": 0.6988655857132643,
+        "min_ms": 5.955583008471876,
+        "max_ms": 8.467165986075997,
+        "median_ms": 6.252208491787314,
+        "fps": 155.20951433834153,
+        "model_source": "npz",
+        "forward_only_mean_ms": 4.541766899637878,
+        "forward_only_fps": 220.17862697438997,
+        "peak_memory_mb": 143.2470817565918
+      }
+    },
+    "pytorch_mps": {
+      "n": {
+        "mean_ms": 10.030187392840162,
+        "std_ms": 0.26326967152490893,
+        "min_ms": 9.604374994523823,
+        "max_ms": 10.458707984071225,
+        "median_ms": 10.037166997790337,
+        "fps": 99.6990346076514,
+        "forward_only_mean_ms": 6.199566583381966,
+        "forward_only_fps": 161.3015985150503
+      }
+    },
+    "pytorch_cpu": {
+      "n": {
+        "mean_ms": 23.50507500814274,
+        "std_ms": 0.9643833603904977,
+        "min_ms": 22.371332976035774,
+        "max_ms": 25.878042040858418,
+        "median_ms": 23.176667018560693,
+        "fps": 42.54400378018684
+      }
+    },
+    "coreml_ane": {
+      "n": {
+        "mean_ms": 2.230215,
+        "std_ms": 0.30624124,
+        "min_ms": 1.850009,
+        "max_ms": 2.9000044,
+        "median_ms": 2.2480488,
+        "fps": 448.38724,
+        "p50_ms": 2.2480488,
+        "p99_ms": 2.9000044,
+        "warmup": 3,
+        "runs": 10,
+        "compute_units": "ane",
+        "cache_bust": true,
+        "preprocess": "letterbox",
+        "model_path": "models/yolo26n.mlpackage"
+      }
+    },
+    "coreml_all": {
+      "n": {
+        "mean_ms": 2.7534366,
+        "std_ms": 0.052404713,
+        "min_ms": 2.6830435,
+        "max_ms": 2.840042,
+        "median_ms": 2.7589798,
+        "fps": 363.1825,
+        "p50_ms": 2.7589798,
+        "p99_ms": 2.840042,
+        "warmup": 3,
+        "runs": 10,
+        "compute_units": "all",
+        "cache_bust": true,
+        "preprocess": "letterbox",
+        "model_path": "models/yolo26n.mlpackage"
+      }
+    },
+    "coreml_gpu": {
+      "n": {
+        "mean_ms": 2.9862761,
+        "std_ms": 0.3906609,
+        "min_ms": 2.7179718,
+        "max_ms": 4.047036,
+        "median_ms": 2.834916,
+        "fps": 334.8652,
+        "p50_ms": 2.834916,
+        "p99_ms": 4.047036,
+        "warmup": 3,
+        "runs": 10,
+        "compute_units": "gpu",
+        "cache_bust": true,
+        "preprocess": "letterbox",
+        "model_path": "models/yolo26n.mlpackage"
+      }
+    },
+    "coreml_cpu": {
+      "n": {
+        "mean_ms": 10.2553005,
+        "std_ms": 0.26566884,
+        "min_ms": 9.930015,
+        "max_ms": 10.738015,
+        "median_ms": 10.231018,
+        "fps": 97.510544,
+        "p50_ms": 10.231018,
+        "p99_ms": 10.738015,
+        "warmup": 3,
+        "runs": 10,
+        "compute_units": "cpu",
+        "cache_bust": true,
+        "preprocess": "letterbox",
+        "model_path": "models/yolo26n.mlpackage"
+      }
+    }
+  },
+  "webai_results": {
+    "benchmark": "YOLO26 Inference - Three-Way Comparison",
+    "timestamp": "2026-05-24T14:59:45.822431",
+    "device_info": {
+      "platform": "macOS-26.0.1-arm64-arm-64bit",
+      "processor": "arm",
+      "python_version": "3.12.10",
+      "cpu": "Apple M4 Pro",
+      "mac_model": "Mac16,7"
+    },
+    "configuration": {
+      "warmup_runs": 3,
+      "timed_runs": 10,
+      "image_size": 640,
+      "model_sizes": [
+        "n"
+      ],
+      "allow_random_mlx": false
+    },
+    "results": {
+      "mlx": {
+        "n": {
+          "mean_ms": 6.442903995048255,
+          "std_ms": 0.6988655857132643,
+          "min_ms": 5.955583008471876,
+          "max_ms": 8.467165986075997,
+          "median_ms": 6.252208491787314,
+          "fps": 155.20951433834153,
+          "model_source": "npz",
+          "forward_only_mean_ms": 4.541766899637878,
+          "forward_only_fps": 220.17862697438997,
+          "peak_memory_mb": 143.2470817565918
+        }
+      },
+      "pytorch_mps": {
+        "n": {
+          "mean_ms": 10.030187392840162,
+          "std_ms": 0.26326967152490893,
+          "min_ms": 9.604374994523823,
+          "max_ms": 10.458707984071225,
+          "median_ms": 10.037166997790337,
+          "fps": 99.6990346076514,
+          "forward_only_mean_ms": 6.199566583381966,
+          "forward_only_fps": 161.3015985150503
+        }
+      },
+      "pytorch_cpu": {
+        "n": {
+          "mean_ms": 23.50507500814274,
+          "std_ms": 0.9643833603904977,
+          "min_ms": 22.371332976035774,
+          "max_ms": 25.878042040858418,
+          "median_ms": 23.176667018560693,
+          "fps": 42.54400378018684
+        }
+      }
+    },
+    "speedups": {
+      "mlx_vs_cpu": {
+        "n": 3.65
+      },
+      "mps_vs_cpu": {
+        "n": 2.34
+      },
+      "mlx_vs_mps": {
+        "n": 1.56
+      }
+    }
+  },
+  "webai_error": null
+}

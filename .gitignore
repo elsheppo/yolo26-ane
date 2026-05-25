@@ -1,0 +1,14 @@
+.build/
+.swiftpm/
+rust/target/
+models/*.mlpackage
+models/*.mlmodelc
+models/*.pt
+models/**/*.gguf
+models/**/.cache/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+output/
+tmp/
